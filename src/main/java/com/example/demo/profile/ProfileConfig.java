@@ -1,26 +1,25 @@
-package com.example.demo.student;
+package com.example.demo.profile;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 
 import static java.time.Month.*;
 
 @Configuration
-public class StudentConfig {
+public class ProfileConfig {
     @Bean
-    CommandLineRunner commandLineRunner(StudentRepository repository) {
+    CommandLineRunner commandLineRunner(ProfileRepository repository) {
         return args -> {
-            Student joey = new Student(
+            Profile joey = new Profile(
                     "Joey",
                     "joeyman@gmail.com",
                     LocalDate.of(2006, FEBRUARY, 15)
             );
-            Student mariam = new Student(
+            Profile mariam = new Profile(
                     "Mariam",
                     "mariam@gmail.com",
                     LocalDate.of(2000, JANUARY, 5)
